@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon ./main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "jsonwebtoken": "^9.0.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^12.0.0",
+    "koa-static": "^5.0.0",
+    "koa2": "^2.0.0-alpha.7",
+    "koa2-cors": "^2.0.6",
+    "mysql2": "^3.3.2",
+    "password-hash": "^1.2.2",
+    "sequelize": "^6.31.1"
+  },
+  "devDependencies": {
+    "chalk": "^5.2.0",
+    "http-proxy-middleware": "^2.0.6",
+    "koa-convert": "^2.0.0",
+    "koa-logger": "^3.2.1",
+    "koa-proxy": "^1.0.0-alpha.3",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.20"
+  }
+}
