@@ -2,7 +2,7 @@
  * @Author: liaocy lcy@sh-senyu.com
  * @Date: 2023-05-24 10:44:45
  * @LastEditors: liaocy lcy@sh-senyu.com
- * @LastEditTime: 2023-05-25 15:39:36
+ * @LastEditTime: 2023-06-01 10:43:47
  * @FilePath: /server/service/user.service.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -13,7 +13,7 @@ const Config = require("../config/config");
 const bcrypt = require("bcrypt");
 
 const config = new Config();
-const { UserCreateError, UserNotFound } = errorTypes;
+const { UserCreateError, UserNotFound, UserLoginError } = errorTypes;
 class UserService {
   // 处理创建用户的service
   async createUser(username, password) {
@@ -69,7 +69,7 @@ class UserService {
           token
         }
       };
-    }
+    } else UserLoginError;
   }
   async getUser(userId) {
     const user = await User.findOne({
